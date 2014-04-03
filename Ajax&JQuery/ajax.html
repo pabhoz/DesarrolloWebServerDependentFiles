@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ajax & JQuery</title>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<script src="js/jquery1.11.0.js"></script>
+</head>
+<body>
+	<div id="unica"></div>
+	<button id="doAjax">Do Ajax</button>
+	<script>
+
+	$('#doAjax').on('click',function(){
+		$.ajax({
+
+				type: "POST",
+  				url: "php/some.php",
+  				data: { name: "John", location: "Boston" },
+  				beforeSend: function(){
+  					alert("voy a mandar");
+  				}
+
+				}).done(function(msg) {
+
+				 $("#unica").html(msg);
+
+		});
+	});
+
+		var jqxhr = $.ajax( "php/some.php" )
+					  .done(function() {
+					    alert( "success" );
+					  })
+					  .fail(function() {
+					    alert( "error" );
+					  })
+					  .always(function() {
+					    alert( "complete" );
+					  });
+					 
+					// Perform other work here ...
+					 
+					// Set another completion function for the request above
+					jqxhr.always(function() {
+					  alert( "second complete" );
+					});
+
+	</script>
+</body>
+</html>

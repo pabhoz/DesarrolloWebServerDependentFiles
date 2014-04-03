@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ajax & JQuery</title>
+	<link rel="stylesheet" href="css/stylesheet.css">
+	<script src="js/jquery1.11.0.js"></script>
+</head>
+<body>
+	<div id="unica"></div>
+	<ul>
+		<li class="clickable">Opción 1</li>
+		<li class="clickable">Opción 2</li>
+		<li class="clickable">Opción 3</li>
+		<li class="clickable">Opción 4</li>
+		<li class="clickable">Opción 5</li>
+		<li class="clickable">Opción 6</li>
+		<li class="clickable">Opción 7</li>
+		<li class="clickable">Opción 8</li>
+	</ul>
+	<button id="intercambio">Intercambiar estados</button>
+	<button id="mo">Mostrar Ocultos</button>
+	<button id="mt">Mostrar Todos</button>
+	<script>
+	//Jquery funciona mediante selectores
+	//Es decir los mismos de CSS
+		$("#unica").html("Le escribo lo que quiero");
+		$(".clickable").on('click',function(){
+			alert("Ouch");
+			$(this).slideToggle();
+		}).css("cursor","pointer");
+		
+		$("#intercambio").on('click',function(){
+			$.each($(".clickable"),function(){
+				$(this).slideToggle();
+			});
+		});
+		//Tarea, terminar botones
+	</script>
+</body>
+</html>
