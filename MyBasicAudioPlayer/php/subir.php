@@ -32,4 +32,9 @@
 	}else{
 		echo "paila";
 	}
+	/**
+	Trampisha para cuando terminemos de shubiiiir
+	*/
+
+	echo '<script> alert("Subió!"); parent.location.reload(); </script>';
 ?>

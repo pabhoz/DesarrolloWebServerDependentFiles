@@ -4,7 +4,6 @@
 		<meta charset="UTF-8">
 		<title>Responsive Design</title>
 	    <link rel="stylesheet" href="./css/stylesheet.css">
-	    <script src="leJS.js"></script>
 	    <script src="js/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
@@ -43,9 +42,6 @@
 						  		</div>';
 						}
                 	?>
-                    
-                    <div class="element"></div>
-                    <div class="element"></div>
                 </div>
             </div>
             
