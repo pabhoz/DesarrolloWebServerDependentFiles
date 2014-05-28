@@ -1,0 +1,216 @@
+*{
+	margin: 0; padding: 0;
+    box-sizing : border-box;   
+}
+
+body{
+	width: 100%;
+	height: 100%;
+    overflow: hidden;
+}
+
+
+header{
+	width: 100%;
+	height: 50px;
+	background-color: #06101c;
+    float: left;
+}
+
+#busqueda{
+    float: left;
+    display: block;
+    width: 100%;
+    height: 30px;
+}
+
+#busqueda input, #busqueda div{
+    float: left;
+    display: inline-block;   
+}
+
+#busqueda input[type="text"]{
+    width: 80%;
+    height: inherit;
+    padding: 5px;
+}
+
+#busqueda .searchBtn{
+    width:20%;
+    height: inherit;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+#clasificacion{
+    background-color: gray;
+}
+#contenedorContenido{
+    width: 100%;
+    height: 100%;
+    max-width: 970px;
+    margin: auto;
+}
+
+#contenedorReproductor{
+
+    float: left;
+    background-color: #06101c;
+    width: 100%;
+}
+#imagenAlbum{
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+#imagenAlbum img{
+    width: 100%;
+}
+
+#informacionCancion{
+    float: left;
+    width: 50%;
+    padding: 10px;
+    color: white;   
+}
+
+#informacionCancion ul li{
+    list-style: none;
+    margin: 0 0 10px 0;
+}
+
+#informacionCancion .infoSecundaria{  
+    font-size: 1.1em;
+}
+
+#informacionCancion .titulo{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#reproductor{
+    width: 100%;   
+}
+
+#contenedorPlayList{
+    display: none;
+    float: left;
+    width: 40%;
+}
+
+#playList{
+    float: left;  
+}
+#playList img{
+    width: 100px;
+}
+
+#contenedorCanciones{
+    float: left;
+    width: 100%;
+}
+
+#canciones, #clasificacion{ float: left; }
+
+#clasificacion{
+    width: 100%;
+    height: 35px;
+}
+
+#canciones{
+    width: 100%;
+    max-height: 250px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+#canciones .cancion, #playList .cancion{ 
+    float: left;  
+    border: 1px solid gray;
+    margin-bottom: 5px;
+}
+
+#canciones .cancion div, #playList .cancion div{ float: left; display: inline-block; }
+
+#canciones .cancion .albumCover,#playList .cancion .albumCover{
+    width: 20%;
+    padding: 5px;
+}
+
+#canciones .cancion .albumCover img,#playList .cancion .albumCover img{
+    width: 100%;
+}
+
+#canciones .cancion .titulo,#playList .cancion .titulo{
+    width: 80%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.3em;
+}
+#canciones .cancion .playBtn,#playList .cancion .playBtn{
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+    width: 80%;
+}
+
+/**** MEDIA QUERIES ******/
+@media screen and (min-width:960px) {
+    #contenedorReproductor, #contenedorCanciones{
+        width: 60%;
+    }
+    #canciones, #playList{
+        width: 100%;
+        max-height: 100%;
+        cursor: pointer;
+    }
+    #busqueda{
+        margin: 10px 0;   
+    }
+}
+
+@media screen and (min-width:769px) {
+    #contenedorReproductor, #contenedorCanciones{
+        width: 60%;
+    }
+    #contenedorPlayList{
+     display: inline-block;   
+    }
+    #canciones, #playList{
+        width: 100%;
+        max-height: 100%;
+        cursor: pointer;
+    }
+
+}
+/* FORMULARIO  */
+.hidden{
+    display: none;
+}
+
+#iframeContainer{
+    display: none;
+}
+
+#uploadForm{
+    position: absolute;
+    padding: 15px;
+    border: 1px solid gray;
+    width: 90%;
+    max-width: 500px;
+    max-height: 200px;
+    background-color: white;
+}
+#uploadForm input{
+    display: block;
+    width: 100%; 
+}
+#uploadForm .title{
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+}

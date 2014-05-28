@@ -113,6 +113,10 @@ nav#mainMenu{
 .lateralDerecho .small{
     min-height:130px;
 }
+#playList{
+    float: left;
+    width: 100%;
+}
 section{
     position:relative;
     padding:10px;

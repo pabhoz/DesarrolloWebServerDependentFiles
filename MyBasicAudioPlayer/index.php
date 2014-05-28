@@ -36,9 +36,9 @@
 
                 		$select = "SELECT * FROM audios;";
                 		$result = mysql_query($select);
-						while($row = mysql_fetch_array($result)) {
+						while($cancion = mysql_fetch_array($result)) {
 						  echo '<div class="element">
-									<button class="songPicker" data-uri="'.$row["uri"].'" >'.$row["title"].'</button>
+									<button class="songPicker" data-uri="'.$cancion["uri"].'" >'.$cancion["title"].'</button>
 						  		</div>';
 						}
                 	?>
